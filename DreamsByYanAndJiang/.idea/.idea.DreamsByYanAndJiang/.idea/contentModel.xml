@@ -9,6 +9,7 @@
       <e p="Assets" t="Include">
         <e p="Resources" t="Include">
           <e p="Shaders" t="Include">
+            <e p="Cloud_Shader_Coded_Unlit.shader" t="Include" />
             <e p="CloudShader_Coded.shader" t="Include" />
           </e>
         </e>
