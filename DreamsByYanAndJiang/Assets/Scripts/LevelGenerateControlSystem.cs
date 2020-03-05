@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Hertzole.GoldPlayer.Example;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -55,7 +56,7 @@ public class LevelGenerateControlSystem : MonoBehaviour
         var pos = _realStartPositions[ind];
         var obj = Instantiate(_platformPrefab,pos, Quaternion.Euler(_direction));
         var platformScript = obj.GetComponent<MovingPlatform>();
-        platformScript.Init(3, _direction);
+        //platformScript.Init(3, _direction);
     }
 
     // Update is called once per frame
