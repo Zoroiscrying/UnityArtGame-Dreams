@@ -7,6 +7,65 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Hertzole" t="Include">
+          <e p="Gold Player" t="Include">
+            <e p="Hertzole.GoldPlayer.asmdef" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Core" t="Include">
+                <e p="Classes" t="Include">
+                  <e p="AudioItem.cs" t="Include" />
+                  <e p="BobClass.cs" t="Include" />
+                  <e p="FOVKickClass.cs" t="Include" />
+                  <e p="InputItem.cs" t="Include" />
+                  <e p="MovingPlatformsClass.cs" t="Include" />
+                  <e p="StaminaClass.cs" t="Include" />
+                </e>
+                <e p="Components" t="Include">
+                  <e p="PlayerAudioBehaviour.cs" t="Include" />
+                  <e p="PlayerBehaviour.cs" t="Include" />
+                </e>
+                <e p="Data Types" t="Include">
+                  <e p="Enums.cs" t="Include" />
+                  <e p="GoldPlayerDelegates.cs" t="Include" />
+                  <e p="MovementSpeeds.cs" t="Include" />
+                </e>
+                <e p="GoldInput.cs" t="Include" />
+                <e p="GoldPlayerController.cs" t="Include" />
+                <e p="GoldPlayerInput.cs" t="Include" />
+                <e p="GoldPlayerInputSystem.cs" t="Include" />
+                <e p="IGoldInput.cs" t="Include" />
+                <e p="Modules" t="Include">
+                  <e p="PlayerAudio.cs" t="Include" />
+                  <e p="PlayerBob.cs" t="Include" />
+                  <e p="PlayerCamera.cs" t="Include" />
+                  <e p="PlayerModule.cs" t="Include" />
+                  <e p="PlayerMovement.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Editor" t="Include">
+                <e p="Core" t="Include">
+                  <e p="AudioItemEditor.cs" t="Include" />
+                  <e p="GoldPlayerControllerEditor.cs" t="Include" />
+                  <e p="GoldPlayerMenuItems.cs" t="Include" />
+                  <e p="GoldPlayerUIHelper.cs" t="Include" />
+                </e>
+                <e p="Hertzole.GoldPlayer.Editor.asmdef" t="Include" />
+                <e p="Interaction" t="Include">
+                  <e p="GoldPlayerInteractableEditor.cs" t="Include" />
+                  <e p="GoldPlayerInteractionDefine.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Interaction" t="Include">
+                <e p="GoldPlayerInteractable.cs" t="Include" />
+                <e p="GoldPlayerInteraction.cs" t="Include" />
+                <e p="IGoldPlayerInteractable.cs" t="Include" />
+              </e>
+              <e p="UI" t="Include">
+                <e p="GoldPlayerUI.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Resources" t="Include">
           <e p="Shaders" t="Include">
             <e p="Cloud_Shader_Coded_Unlit.shader" t="Include" />
@@ -14,7 +73,19 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="SimpleCameraController.cs" t="Include" />
+          <e p="CameraRaycasting.cs" t="Include" />
+          <e p="Interface" t="Include">
+            <e p="IInteractableZoro.cs" t="Include" />
+            <e p="ITouchableZoro.cs" t="Include" />
+          </e>
+          <e p="LevelGenerateControlSystem.cs" t="Include" />
+          <e p="MovingPlatform.cs" t="Include" />
+          <e p="PlayerTouchEnvironment.cs" t="Include" />
+          <e p="TestAndPrototype" t="Include">
+            <e p="DestroySelf.cs" t="Include" />
+            <e p="InteractbleItem.cs" t="Include" />
+            <e p="SimpleCameraController.cs" t="Include" />
+          </e>
         </e>
         <e p="TutorialInfo" t="Include">
           <e p="Scripts" t="Include">
@@ -26,6 +97,8 @@
         </e>
       </e>
       <e p="DreamsByYanAndJiang.sln" t="IncludeFlat" />
+      <e p="Hertzole.GoldPlayer.csproj" t="IncludeRecursive" />
+      <e p="Hertzole.GoldPlayer.Editor.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />

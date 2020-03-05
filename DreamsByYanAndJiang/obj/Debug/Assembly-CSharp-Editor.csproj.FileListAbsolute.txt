@@ -308,3 +308,7 @@ D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\obj\Debug\Assemb
 D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\obj\Debug\Assembly-CSharp-Editor.csproj.CopyComplete
 D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\obj\Debug\Assembly-CSharp-Editor.dll
 D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\obj\Debug\Assembly-CSharp-Editor.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.InputSystem.dll
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Hertzole.GoldPlayer.Editor.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Hertzole.GoldPlayer.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.InputSystem.pdb

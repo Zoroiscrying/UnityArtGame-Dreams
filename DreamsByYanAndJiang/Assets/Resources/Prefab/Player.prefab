@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8663183558834414462}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: CameraHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8663183558885351027}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 8663183559440763069}
   - component: {fileID: 8663183559440763068}
   - component: {fileID: 8663183559440763067}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8663183559736703950}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Bob Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,8 @@ GameObject:
   - component: {fileID: 8663183560071995826}
   - component: {fileID: 8663183560071995825}
   - component: {fileID: 8663183560071995824}
-  m_Layer: 0
+  - component: {fileID: 1627973052}
+  m_Layer: 1
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,16 +351,16 @@ MonoBehaviour:
     bobClass:
       enableBob: 1
       unscaledTime: 0
-      bobFrequency: 1.5
-      bobHeight: 0.2
-      swayAngle: 0.3
-      sideMovement: 0.05
-      heightMultiplier: 0.3
-      strideMultiplier: 0.3
-      landMove: 0.4
-      landTilt: 20
-      enableStrafeTilting: 1
-      strafeTilt: 3
+      bobFrequency: 2
+      bobHeight: 0.3
+      swayAngle: 0.1
+      sideMovement: 0.03
+      heightMultiplier: 0.1
+      strideMultiplier: 0.1
+      landMove: 0.1
+      landTilt: 0
+      enableStrafeTilting: 0
+      strafeTilt: 1
       bobTarget: {fileID: 8663183559736703950}
   audio:
     enableAudio: 1
@@ -430,6 +431,18 @@ MonoBehaviour:
   input: {fileID: -944628639613478452, guid: c537c98648aea9140a14e8078b9aa86d, type: 3}
   autoEnableInput: 1
   autoDisableInput: 1
+--- !u!114 &1627973052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8663183560071995829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6c63e02061e03419563a8fcbeca299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8663183560106290308
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +455,7 @@ GameObject:
   - component: {fileID: 8663183560106290306}
   - component: {fileID: 8663183560106290304}
   - component: {fileID: 8663183560106290307}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}

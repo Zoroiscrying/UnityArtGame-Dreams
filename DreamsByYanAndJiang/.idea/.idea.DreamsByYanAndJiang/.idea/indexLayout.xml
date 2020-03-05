@@ -5,7 +5,7 @@
     <explicitIncludes>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.2.16</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.0</Path>
-      <Path>Library/PackageCache/com.unity.ide.rider@1.1.4</Path>
+      <Path>Library/PackageCache/com.unity.ide.rider@1.2.1</Path>
       <Path>Library/PackageCache/com.unity.ide.vscode@1.1.4</Path>
       <Path>Library/PackageCache/com.unity.inputsystem@1.0.0-preview.5</Path>
       <Path>Library/PackageCache/com.unity.render-pipelines.core@7.1.8</Path>
@@ -21,7 +21,6 @@
       <Path>.idea</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>

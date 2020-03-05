@@ -300,3 +300,11 @@ D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\obj\Debug\Assemb
 D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\obj\Debug\Assembly-CSharp.dll
 D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\obj\Debug\Assembly-CSharp.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.InputSystem.dll
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\nunit.framework.dll
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Hertzole.GoldPlayer.Editor.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Hertzole.GoldPlayer.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.InputSystem.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\nunit.framework.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\nunit.framework.xml
