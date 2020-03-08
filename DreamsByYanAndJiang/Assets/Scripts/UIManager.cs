@@ -12,10 +12,44 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private Text _hintText;
     [SerializeField] private RectTransform _startPos;
     [SerializeField] private RectTransform _endPos;
+    [SerializeField] private Text _pressEToInteract;
 
     [Header("Scene Cover Image")] [SerializeField]
     private Image _sceneCoverImage;
-    
+    [SerializeField]
+    private Color _sceneEndColor = Color.black;
+    [SerializeField] private float _sceneEndTime = 1.0f;
+    public float SceneEndAnimTime => _sceneEndTime;
+
+    private void Awake()
+    {
+        if (UIManager.Instance != this && UIManager.Instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void ShowInteractHint()
+    {
+        if (_pressEToInteract==null)
+        {
+            return;
+        }
+        _pressEToInteract.gameObject.SetActive(true);
+        _pressEToInteract.color = _sceneEndColor;
+    }
+
+    public void DisableInteractHint()
+    {
+        if (_pressEToInteract==null)
+        {
+            return;
+        }
+        _pressEToInteract.gameObject.SetActive(false);
+        _pressEToInteract.color = new Color(
+            _sceneEndColor.r,_sceneEndColor.g,_sceneEndColor.b,0); 
+    }
+
     public void ShowHint(Color fontColor,bool ease = true ,string text="DEFAULT TEXT", int fontSize=32,
         float outTime = 1.0f,float endTime = 2.0f,Ease outEasingType=Ease.OutQuad, Ease endEasingType = Ease.InQuad)
     {
@@ -46,28 +80,46 @@ public class UIManager : Singleton<UIManager>
         this._hintText.DOColor(new Color(0, 0, 0, 0), time);
     }
 
-    private void SceneEnterAnim()
+    public void ChangeSceneCoverImageColor(Color col)
     {
-        _sceneCoverImage.color = Color.black;
-        _sceneCoverImage.DOColor(new Color(0,0,0,0), 1.0f).SetEase(Ease.OutQuad);
+        _sceneEndColor = col;
     }
 
-    private void SceneEndAnim()
+    public void SceneEnterAnim(Action onComplete)
     {
-        _sceneCoverImage.DOColor(new Color(0,0,0,255), 1.0f).SetEase(Ease.InQuad);
+        _sceneCoverImage.color = _sceneEndColor;
+        _sceneCoverImage.DOColor(
+                new Color(_sceneEndColor.r, _sceneEndColor.g, _sceneEndColor.b, 0)
+                , _sceneEndTime)
+            .SetEase(Ease.OutQuad)
+            .OnComplete((onComplete.Invoke));
     }
 
-    private void Start()
+    public void SceneEnterAnim()
     {
-        SceneEnterAnim();
+        _sceneCoverImage.color = _sceneEndColor;
+        _sceneCoverImage.DOColor(
+                new Color(_sceneEndColor.r, _sceneEndColor.g, _sceneEndColor.b, 0)
+                , _sceneEndTime)
+            .SetEase(Ease.OutQuad);
+        Debug.Log("Scene entered~");
     }
 
-    public void SwithToScene(int sceneBuildIndex, Action<UnityEngine.AsyncOperation> onComplete)
+    public void SceneEndAnim()
     {
-        
-        SceneManager.LoadSceneAsync(sceneBuildIndex).completed += onComplete;
-        
+        _sceneCoverImage.DOColor(
+            new Color(_sceneEndColor.r, _sceneEndColor.g, _sceneEndColor.b,255)
+            , _sceneEndTime).SetEase(Ease.InQuad);
     }
+    
+    public void SceneEndAnim(Action onComplete)
+    {
+        _sceneCoverImage.DOColor(
+            new Color(_sceneEndColor.r, _sceneEndColor.g, _sceneEndColor.b,255)
+            , _sceneEndTime).SetEase(Ease.InQuad)
+            .OnComplete((onComplete.Invoke));
+    }
+    
 
     // private void Update()
     // {

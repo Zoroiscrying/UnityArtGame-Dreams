@@ -100,7 +100,7 @@ namespace Hertzole.GoldPlayer
                 foreach (InputAction action in item.actions)
                 {
                     actions.Add(item.name + "/" + action.name, action);
-                    Debug.Log(item.name+'/'+action.name);
+                    //Debug.Log(item.name+'/'+action.name);
                 }
             }
         }

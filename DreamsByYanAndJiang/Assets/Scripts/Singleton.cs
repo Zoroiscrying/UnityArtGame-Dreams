@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
  
 /// <summary>
 /// Inherit from this base class to create a singleton.
@@ -18,12 +19,12 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         get
         {
-            if (m_ShuttingDown)
-            {
-                Debug.LogWarning("[Singleton] Instance '" + typeof(T) +
-                                 "' already destroyed. Returning null.");
-                return null;
-            }
+            // if (m_ShuttingDown)
+            // {
+            //     Debug.LogWarning("[Singleton] Instance '" + typeof(T) +
+            //                      "' already destroyed. Returning null.");
+            //     return null;
+            // }
  
             lock (m_Lock)
             {
@@ -43,14 +44,19 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
                         // Make instance persistent.
                         DontDestroyOnLoad(singletonObject);
                     }
+                    else
+                    {
+                        DontDestroyOnLoad(m_Instance.gameObject);
+                    }
+                    
                 }
  
                 return m_Instance;
             }
         }
     }
- 
- 
+
+
     private void OnApplicationQuit()
     {
         m_ShuttingDown = true;

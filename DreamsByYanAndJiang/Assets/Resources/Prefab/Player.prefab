@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8663183558834414462}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: CameraHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8663183558885351027}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 8663183559440763069}
   - component: {fileID: 8663183559440763068}
   - component: {fileID: 8663183559440763067}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8663183559736703950}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: Bob Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,9 +220,10 @@ GameObject:
   - component: {fileID: 8663183560071995825}
   - component: {fileID: 8663183560071995824}
   - component: {fileID: 1627973052}
-  m_Layer: 1
+  - component: {fileID: 827938970712376171}
+  m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -314,12 +315,12 @@ MonoBehaviour:
       regenRate: 0.8
       regenWait: 1
     canJump: 1
-    jumpHeight: 2
+    jumpHeight: 6
     airJump: 1
     airJumpTime: 0.1
-    airJumpsAmount: 0
+    airJumpsAmount: 1
     allowAirJumpDirectionChange: 1
-    canCrouch: 1
+    canCrouch: 0
     crouchToggleMode: 0
     crouchSpeeds:
       forwardSpeed: 2
@@ -331,7 +332,7 @@ MonoBehaviour:
     groundLayer:
       serializedVersion: 2
       m_Bits: 1
-    acceleration: 0.1
+    acceleration: 0.01
     gravity: 20
     airControl: 0.5
     enableGroundStick: 1
@@ -375,7 +376,11 @@ MonoBehaviour:
       maxPitch: 1.1
       changeVolume: 1
       volume: 1
-      audioClips: []
+      audioClips:
+      - {fileID: 8300000, guid: 44e59b73420f0e64fb30e755c49b3823, type: 3}
+      - {fileID: 8300000, guid: 62e6bf700540ea9478b91b33afa85e7e, type: 3}
+      - {fileID: 8300000, guid: bbe4ed33245f5804db42ff8c43d75412, type: 3}
+      - {fileID: 8300000, guid: 1e5761292ed025241bdb02ff49c552dd, type: 3}
     runFootsteps:
       enabled: 1
       randomPitch: 1
@@ -384,7 +389,11 @@ MonoBehaviour:
       maxPitch: 1.6
       changeVolume: 1
       volume: 1
-      audioClips: []
+      audioClips:
+      - {fileID: 8300000, guid: 44e59b73420f0e64fb30e755c49b3823, type: 3}
+      - {fileID: 8300000, guid: 62e6bf700540ea9478b91b33afa85e7e, type: 3}
+      - {fileID: 8300000, guid: bbe4ed33245f5804db42ff8c43d75412, type: 3}
+      - {fileID: 8300000, guid: 1e5761292ed025241bdb02ff49c552dd, type: 3}
     crouchFootsteps:
       enabled: 1
       randomPitch: 1
@@ -393,7 +402,11 @@ MonoBehaviour:
       maxPitch: 1.1
       changeVolume: 1
       volume: 0.4
-      audioClips: []
+      audioClips:
+      - {fileID: 8300000, guid: 44e59b73420f0e64fb30e755c49b3823, type: 3}
+      - {fileID: 8300000, guid: 62e6bf700540ea9478b91b33afa85e7e, type: 3}
+      - {fileID: 8300000, guid: bbe4ed33245f5804db42ff8c43d75412, type: 3}
+      - {fileID: 8300000, guid: 1e5761292ed025241bdb02ff49c552dd, type: 3}
     jumping:
       enabled: 1
       randomPitch: 1
@@ -402,7 +415,8 @@ MonoBehaviour:
       maxPitch: 1.1
       changeVolume: 1
       volume: 1
-      audioClips: []
+      audioClips:
+      - {fileID: 8300000, guid: 11cc82c4daa9f304dbbfab62c9207608, type: 3}
     landing:
       enabled: 1
       randomPitch: 1
@@ -411,7 +425,8 @@ MonoBehaviour:
       maxPitch: 1.1
       changeVolume: 1
       volume: 1
-      audioClips: []
+      audioClips:
+      - {fileID: 8300000, guid: ceb0f9d730c213441b4eaccb59f6fcde, type: 3}
     footstepsSource: {fileID: 8663183560106290306}
     jumpSource: {fileID: 8663183560106290306}
     landSource: {fileID: 8663183560106290306}
@@ -443,6 +458,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6c63e02061e03419563a8fcbeca299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &827938970712376171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8663183560071995829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f45586b78bd9074a94470c5aa3a3a88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
 --- !u!1 &8663183560106290308
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +483,7 @@ GameObject:
   - component: {fileID: 8663183560106290306}
   - component: {fileID: 8663183560106290304}
   - component: {fileID: 8663183560106290307}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +514,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 44e59b73420f0e64fb30e755c49b3823, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -496,7 +524,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.8570957
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -582,7 +610,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 11cc82c4daa9f304dbbfab62c9207608, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -592,8 +620,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 1.8701706
+  MaxDistance: 1.8701715
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -678,7 +706,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 62e6bf700540ea9478b91b33afa85e7e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -688,8 +716,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 1.8646636
+  MaxDistance: 1.8651123
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

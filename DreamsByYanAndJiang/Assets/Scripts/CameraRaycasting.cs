@@ -40,6 +40,8 @@ public class CameraRaycasting : MonoBehaviour
                 var withInRange = whatIHit.distance <= interactable.MaxRange;
                 if (withInRange)
                 {
+                    UIManager.Instance.ShowInteractHint();
+                    
                     if (interactable == _currentTarget)
                     {
                         return;
@@ -60,6 +62,7 @@ public class CameraRaycasting : MonoBehaviour
                 {
                     if (_currentTarget != null)
                     {
+                        UIManager.Instance.DisableInteractHint();
                         _currentTarget.OnEndHover();
                         _currentTarget = null;
                         return;
@@ -70,6 +73,7 @@ public class CameraRaycasting : MonoBehaviour
             {
                 if (_currentTarget != null)
                 {
+                    UIManager.Instance.DisableInteractHint();
                     _currentTarget.OnEndHover();
                     _currentTarget = null;
                     return;
@@ -80,6 +84,7 @@ public class CameraRaycasting : MonoBehaviour
         {
             if (_currentTarget != null)
             {
+                UIManager.Instance.DisableInteractHint();
                 _currentTarget.OnEndHover();
                 _currentTarget = null;
                 return;

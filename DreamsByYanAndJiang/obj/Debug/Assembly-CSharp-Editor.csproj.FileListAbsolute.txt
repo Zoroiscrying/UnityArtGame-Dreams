@@ -312,3 +312,10 @@ D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\U
 D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Hertzole.GoldPlayer.Editor.pdb
 D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Hertzole.GoldPlayer.pdb
 D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.InputSystem.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\DOTween.dll
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\DOTweenEditor.dll
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\DOTweenEditor.xml
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\DOTween.xml
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\NaughtyAttributes.Editor.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\NaughtyAttributes.Core.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\NaughtyAttributes.Test.pdb

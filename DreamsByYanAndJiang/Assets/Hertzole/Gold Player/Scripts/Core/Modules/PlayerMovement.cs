@@ -270,6 +270,25 @@ namespace Hertzole.GoldPlayer.Core
         /// <summary> If true, the player can change direction when air jumping. </summary>
         public bool AllowAirJumpDirectionChange { get { return allowAirJumpDirectionChange; } set { allowAirJumpDirectionChange = value; } }
 
+        public int CurrentJumps
+        {
+            get => currentJumps;
+            set
+            {
+                currentJumps = value;
+                
+                if (currentJumps <= 0)
+                {
+                    currentJumps = 0;
+                }
+
+                if (currentJumps >= airJumpsAmount)
+                {
+                    currentJumps = airJumpsAmount;
+                }
+            }
+        }
+        
         /// <summary> Determines if the player can crouch. </summary>
         public bool CanCrouch { get { return canCrouch; } set { canCrouch = value; } }
         /// <summary> Configuration of crouching as a toggle. </summary>
@@ -691,6 +710,7 @@ namespace Hertzole.GoldPlayer.Core
 
             // Increment the air jumps.
             currentJumps++;
+            
             if (currentJumps > 0 && allowAirJumpDirectionChange)
             {
                 // Get the move direction from the movement input X and Y (on the Z axis).
