@@ -51,7 +51,7 @@ public class UIManager : Singleton<UIManager>
     }
 
     public void ShowHint(Color fontColor,bool ease = true ,string text="DEFAULT TEXT", int fontSize=32,
-        float outTime = 1.0f,float endTime = 2.0f,Ease outEasingType=Ease.OutQuad, Ease endEasingType = Ease.InQuad)
+        float outTime = 2.0f,float endTime = 3.0f,Ease outEasingType=Ease.OutQuad, Ease endEasingType = Ease.InQuad)
     {
         var startPos = _startPos.position;
         var endPos = _endPos.position;

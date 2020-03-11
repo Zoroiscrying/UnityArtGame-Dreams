@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class SceneInitialization : MonoBehaviour
 {
     public UnityEvent IntializationEvent;
+    public static Color SceneHintColor = Color.white;
     
     private void Start()
     {
@@ -14,5 +15,6 @@ public class SceneInitialization : MonoBehaviour
         IntializationEvent.Invoke();
     }
     
+        
     
 }

@@ -215,6 +215,7 @@
             <e p="InteractbleItem.cs" t="Include" />
             <e p="InteractButton.cs" t="Include" />
             <e p="PlayerTouchEnvironment.cs" t="Include" />
+            <e p="SimpleTouchableItem.cs" t="Include" />
             <e p="StandingCollapsePlatform.cs" t="Include" />
             <e p="TouchableItem.cs" t="Include" />
           </e>
