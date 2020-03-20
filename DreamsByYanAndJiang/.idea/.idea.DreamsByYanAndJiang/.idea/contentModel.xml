@@ -348,6 +348,7 @@
           </e>
           <e p="SceneInitialization.cs" t="Include" />
           <e p="Singleton" t="Include">
+            <e p="ResourceManager.cs" t="Include" />
             <e p="SceneManagerZoro.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />
