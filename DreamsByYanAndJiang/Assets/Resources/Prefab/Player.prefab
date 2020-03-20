@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 8663183560071995824}
   - component: {fileID: 1627973052}
   - component: {fileID: 827938970712376171}
+  - component: {fileID: 1237608097}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -259,7 +260,7 @@ CharacterController:
   m_Height: 1.7
   m_Radius: 0.3
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.85, z: 0}
@@ -301,7 +302,7 @@ MonoBehaviour:
       forwardSpeed: 3
       sidewaysSpeed: 2.5
       backwardsSpeed: 2
-    canRun: 1
+    canRun: 0
     runToggleMode: 0
     runSpeeds:
       forwardSpeed: 7
@@ -314,7 +315,7 @@ MonoBehaviour:
       drainRate: 1
       regenRate: 0.8
       regenWait: 1
-    canJump: 1
+    canJump: 0
     jumpHeight: 6
     airJump: 1
     airJumpTime: 0.1
@@ -352,7 +353,7 @@ MonoBehaviour:
     bobClass:
       enableBob: 1
       unscaledTime: 0
-      bobFrequency: 2
+      bobFrequency: 4
       bobHeight: 0.3
       swayAngle: 0.1
       sideMovement: 0.03
@@ -471,6 +472,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 10
+--- !u!114 &1237608097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8663183560071995829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65cf4469964b16348b80a836f864bfc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8663183560106290308
 GameObject:
   m_ObjectHideFlags: 0

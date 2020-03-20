@@ -5,11 +5,14 @@ using System.Linq;
 using Hertzole.GoldPlayer.Core;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class FallOffManager : MonoBehaviour
 {
     [ReorderableList]
-    public List<CheckPoint> _checkPoints;
+    [FormerlySerializedAs("_checkPoints")]
+    public List<CheckPoint> checkPoints;
+    
     private Dictionary<Vector3,int> _checkPointPriorityDict = new Dictionary<Vector3, int>();
     private CheckPoint _activeCheckpoint;
     public bool CheckScenePoints = false;
@@ -19,11 +22,11 @@ public class FallOffManager : MonoBehaviour
     {
         if (CheckScenePoints)
         {
-            _checkPoints.Clear();
-            _checkPoints = FindObjectsOfType<CheckPoint>().ToList();
+            checkPoints.Clear();
+            checkPoints = FindObjectsOfType<CheckPoint>().ToList();
         }
         int priority = 0;
-        foreach (var checkPoint in _checkPoints)
+        foreach (var checkPoint in checkPoints)
         {
             if (checkPoint!=null)
             {
@@ -36,10 +39,10 @@ public class FallOffManager : MonoBehaviour
             }
         }
 
-        if (_checkPoints.Count > 0 && _checkPoints[0]!=null)
+        if (checkPoints.Count > 0 && checkPoints[0]!=null)
         {
-            _checkPoints[0].Active = true;
-            _activeCheckpoint = _checkPoints[0];
+            checkPoints[0].Active = true;
+            _activeCheckpoint = checkPoints[0];
         }
 
     }
@@ -94,9 +97,9 @@ public class FallOffManager : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if (_checkPoints.Count>0)
+        if (checkPoints.Count>0)
         {
-            foreach (var checkPoint in _checkPoints)
+            foreach (var checkPoint in checkPoints)
             {
                 Vector3 colliderSize = checkPoint.Collider.bounds.size;
                 Gizmos.color = Color.blue;

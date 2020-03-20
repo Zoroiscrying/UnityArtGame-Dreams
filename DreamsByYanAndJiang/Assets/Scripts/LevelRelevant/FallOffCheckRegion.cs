@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class FallOffCheckRegion : MonoBehaviour
 {
+    
+    
+    private void Start()
+    {
+        this.GetComponent<Renderer>().sharedMaterial = ResourceManager.Instance.DangerZoneMat;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         // Debug.Log("What is this?");

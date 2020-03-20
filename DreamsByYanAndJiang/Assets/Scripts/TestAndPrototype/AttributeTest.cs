@@ -9,6 +9,8 @@ using UnityEngine;
 
 public class AttributeTest : MonoBehaviour
 {
+    [ReorderableList] public List<Vector3> test;
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))

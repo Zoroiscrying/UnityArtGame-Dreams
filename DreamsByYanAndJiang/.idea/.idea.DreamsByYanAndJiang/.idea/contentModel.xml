@@ -346,6 +346,7 @@
             <e p="LocalLevelRegionManager.cs" t="Include" />
             <e p="MovingPlatform.cs" t="Include" />
           </e>
+          <e p="PlayerMoveControl.cs" t="Include" />
           <e p="SceneInitialization.cs" t="Include" />
           <e p="Singleton" t="Include">
             <e p="ResourceManager.cs" t="Include" />

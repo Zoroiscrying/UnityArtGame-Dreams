@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Resources/Scenes/Dream_IntoTheDream.unity
+    guid: 73494d9415b744643a245d48ab635282
+  - enabled: 1
     path: Assets/Resources/Scenes/MovementTestScene.unity
     guid: 6a74cf5eb205a504db3b1f3fd55c156b
   - enabled: 1
