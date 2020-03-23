@@ -8,10 +8,34 @@ using UnityEngine;
 public class PlayerMoveControl : MonoBehaviour
 {
     private GoldPlayerController playerController;
+    private float _multiplierTime = 0.0f;
+    private float _multiplierValue = 1.0f;
+    private bool _resetedMultiplier = false;
 
     private void Start()
     {
         this.playerController = GetComponent<GoldPlayerController>();
+    }
+
+    private void Update()
+    {
+        //speed up for player.
+        if (_multiplierTime>0.0f)
+        {
+            _multiplierTime -= Time.deltaTime;
+            
+            _resetedMultiplier = false;
+            playerController.Movement.MoveSpeedMultiplier = _multiplierValue;
+        }
+        else if (!_resetedMultiplier)
+        {
+            _resetedMultiplier = true;
+            playerController.Movement.MoveSpeedMultiplier = 1.0f;
+            _multiplierTime = 0.0f;
+        }
+        
+        //
+
     }
 
     public void EnableJump()
@@ -29,9 +53,14 @@ public class PlayerMoveControl : MonoBehaviour
         playerController.Movement.AirJumpsAmount = 1;
     }
 
+    public void AddOneJumpChance()
+    {
+        playerController.Movement.CurrentJumps--;
+    }
+
     public void SpeedUpForSeconds(float multiplier, float sec)
     {
-        playerController.Movement.MoveSpeedMultiplier = multiplier;
-        Timer.Register(sec, (() => playerController.Movement.MoveSpeedMultiplier = 1.0f));
+        this._multiplierTime = sec;
+        _multiplierValue = multiplier;
     }
 }

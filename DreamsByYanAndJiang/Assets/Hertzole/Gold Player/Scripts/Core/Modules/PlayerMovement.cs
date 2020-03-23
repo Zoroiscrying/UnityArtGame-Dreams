@@ -266,7 +266,9 @@ namespace Hertzole.GoldPlayer.Core
         /// <summary> How long the player can be in the air and still jump. </summary>
         public float AirJumpTime { get { return airJumpTime; } set { airJumpTime = value; } }
         /// <summary> How many times the player can jump while in the air. </summary>
-        public int AirJumpsAmount { get { return airJumpsAmount; } set { airJumpsAmount = value; } }
+        public int AirJumpsAmount { get { return airJumpsAmount; } set { airJumpsAmount = value;
+            if (airJumpsAmount < 0) airJumpsAmount = 0;
+        } }
         /// <summary> If true, the player can change direction when air jumping. </summary>
         public bool AllowAirJumpDirectionChange { get { return allowAirJumpDirectionChange; } set { allowAirJumpDirectionChange = value; } }
 
@@ -740,6 +742,33 @@ namespace Hertzole.GoldPlayer.Core
             if (OnJump != null)
                 OnJump.Invoke(jumpHeight);
 #endif
+        }
+
+        public virtual void ApplyVelocity(Vector3 velocity)
+        {
+            this.moveDirection = velocity;
+            
+            if (allowAirJumpDirectionChange)
+            {
+                // Get the move direction from the movement input X and Y (on the Z axis).
+                moveDirection = new Vector3(movementInput.x, moveDirection.y, movementInput.y);
+                // If movement input Y is above 0, we're moving forward, so apply forward move speed.
+                // Else if below 0, we're moving backwards, so apply backwards move speed.
+                if (movementInput.y > 0)
+                {
+                    moveDirection.z *= moveSpeed.ForwardSpeed * moveSpeedMultiplier;
+                }
+                else
+                {
+                    moveDirection.z *= moveSpeed.BackwardsSpeed * moveSpeedMultiplier;
+                }
+
+                // Apply the sideways movement speed to the X movement.
+                moveDirection.x *= moveSpeed.SidewaysSpeed * moveSpeedMultiplier;
+
+                // Update the grounded velocity to the current move direction.
+                groundVelocity = moveDirection;
+            }
         }
 
         /// <summary>

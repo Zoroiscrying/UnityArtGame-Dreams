@@ -327,11 +327,14 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="InteractionSys" t="Include">
+            <e p="BouncePlatform.cs" t="Include" />
             <e p="CameraRaycasting.cs" t="Include" />
             <e p="InteractbleItem.cs" t="Include" />
             <e p="InteractButton.cs" t="Include" />
+            <e p="JumpRestoreTouchableItem.cs" t="Include" />
             <e p="PlayerTouchEnvironment.cs" t="Include" />
             <e p="SimpleTouchableItem.cs" t="Include" />
+            <e p="SpeedMultiplierTouchableItem.cs" t="Include" />
             <e p="StandingCollapsePlatform.cs" t="Include" />
             <e p="TouchableItem.cs" t="Include" />
           </e>
