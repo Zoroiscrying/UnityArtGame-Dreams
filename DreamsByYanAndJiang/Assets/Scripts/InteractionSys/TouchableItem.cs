@@ -17,6 +17,19 @@ public abstract class TouchableItem :MonoBehaviour, ITouchableZoro
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            OnEndTouch();
+        }
+    }
+
+    protected virtual void OnEndTouch(Transform player)
+    {
+        
+    }
+
     protected virtual void OnTouch(Transform player)
     {
         OnTouchGraphics();

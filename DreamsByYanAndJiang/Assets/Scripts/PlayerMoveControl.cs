@@ -58,6 +58,16 @@ public class PlayerMoveControl : MonoBehaviour
         playerController.Movement.CurrentJumps--;
     }
 
+    public void SetJumpMultiplier(float multiplier)
+    {
+        playerController.Movement.JumpHeightMultiplier = multiplier;
+    }
+
+    public void SetMoveSpeedMultiplier(float multiplier)
+    {
+        playerController.Movement.MoveSpeedMultiplier = multiplier;
+    }
+
     public void SpeedUpForSeconds(float multiplier, float sec)
     {
         this._multiplierTime = sec;

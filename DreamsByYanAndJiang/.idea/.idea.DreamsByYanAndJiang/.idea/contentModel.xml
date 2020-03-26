@@ -331,8 +331,10 @@
             <e p="CameraRaycasting.cs" t="Include" />
             <e p="InteractbleItem.cs" t="Include" />
             <e p="InteractButton.cs" t="Include" />
+            <e p="JumpBoostPlatform.cs" t="Include" />
             <e p="JumpRestoreTouchableItem.cs" t="Include" />
             <e p="PlayerTouchEnvironment.cs" t="Include" />
+            <e p="RunSpeedBoostPlatform.cs" t="Include" />
             <e p="SimpleTouchableItem.cs" t="Include" />
             <e p="SpeedMultiplierTouchableItem.cs" t="Include" />
             <e p="StandingCollapsePlatform.cs" t="Include" />
