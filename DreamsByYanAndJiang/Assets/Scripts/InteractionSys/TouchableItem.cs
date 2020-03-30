@@ -21,7 +21,7 @@ public abstract class TouchableItem :MonoBehaviour, ITouchableZoro
     {
         if (other.CompareTag("Player"))
         {
-            OnEndTouch();
+            OnEndTouch(other.transform);
         }
     }
 

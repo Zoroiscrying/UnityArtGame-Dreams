@@ -246,7 +246,9 @@ namespace Hertzole.GoldPlayer.Core
         /// <summary> Multiplies the current move speed. </summary>
         public float MoveSpeedMultiplier { get { return moveSpeedMultiplier; } set { moveSpeedMultiplier = value; } }
         /// <summary> Multiplies the current jump height. </summary>
-        public float JumpHeightMultiplier { get { return jumpHeightMultiplier; } set { jumpHeightMultiplier = value; CalculateJumpHeight(jumpHeight * value); } }
+        public float JumpHeightMultiplier { get { return jumpHeightMultiplier; } set { jumpHeightMultiplier = value; CalculateJumpHeight(jumpHeight * value);
+            JumpHeight = jumpHeight;
+        } }
 
         /// <summary> Determines if the player can run. </summary>
         public bool CanRun { get { return canRun; } set { canRun = value; } }

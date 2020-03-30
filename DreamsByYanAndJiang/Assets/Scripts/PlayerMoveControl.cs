@@ -61,6 +61,7 @@ public class PlayerMoveControl : MonoBehaviour
     public void SetJumpMultiplier(float multiplier)
     {
         playerController.Movement.JumpHeightMultiplier = multiplier;
+        Debug.Log("Set:" + multiplier);
     }
 
     public void SetMoveSpeedMultiplier(float multiplier)

@@ -323,6 +323,7 @@
           <e p="Shaders" t="Include">
             <e p="Cloud_Shader_Coded_Unlit.shader" t="Include" />
             <e p="CloudShader_Coded.shader" t="Include" />
+            <e p="FunctionAHLSL.txt" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
@@ -349,6 +350,7 @@
             <e p="FallOffCheckRegion.cs" t="Include" />
             <e p="FallOffManager.cs" t="Include" />
             <e p="LocalLevelRegionManager.cs" t="Include" />
+            <e p="MovingEvent.cs" t="Include" />
             <e p="MovingPlatform.cs" t="Include" />
           </e>
           <e p="PlayerMoveControl.cs" t="Include" />

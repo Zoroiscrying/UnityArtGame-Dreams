@@ -6,6 +6,7 @@ using UnityEngine;
 public class JumpRestoreTouchableItem : TouchableItem
 {
     public ParticleSystem DieEffect;
+    public float RestoreTime = 3.0f;
     public float RotatingSpeed = 10.0f;
     private void Update()
     {
@@ -26,7 +27,8 @@ public class JumpRestoreTouchableItem : TouchableItem
         {
             Instantiate(DieEffect, this.transform.position, Quaternion.identity);
         }
-        Destroy(this.gameObject);
+        Timer.Register(RestoreTime, (() => { this.gameObject.SetActive(true); }));
+        this.gameObject.SetActive(false);
     }
 
 }

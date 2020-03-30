@@ -11,6 +11,8 @@ namespace Hertzole.GoldPlayer.Example
     [AddComponentMenu("Gold Player/Examples/Moving Platform", 100)]
     public class MovingPlatform : MonoBehaviour
     {
+        public bool BeginMove = true;
+        public bool EndMoveOnLastPoint = false;
         [System.Serializable]
         public struct Waypoint
         {
@@ -40,6 +42,16 @@ namespace Hertzole.GoldPlayer.Example
         private int currentWaypoint = 0;
         private float nextMoveTime = 0;
 
+        public void StartMove()
+        {
+            BeginMove = true;
+        }
+
+        public void StopMoving()
+        {
+            BeginMove = false;
+        }
+
         // Use this for initialization
         void Start()
         {
@@ -66,17 +78,24 @@ namespace Hertzole.GoldPlayer.Example
         // Update is called once per frame
         void Update()
         {
-            if (waypoints.Count > 0)
+            if (BeginMove)
             {
-                if (Time.time >= nextMoveTime)
+                if (waypoints.Count > 0)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypoint].position, moveSpeed * Time.deltaTime);
-                    transform.eulerAngles = Vector3.MoveTowards(transform.eulerAngles, waypoints[currentWaypoint].rotation, rotateSpeed * Time.deltaTime);
-                }
+                    if (Time.time >= nextMoveTime)
+                    {
+                        transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypoint].position, moveSpeed * Time.deltaTime);
+                        transform.eulerAngles = Vector3.MoveTowards(transform.eulerAngles, waypoints[currentWaypoint].rotation, rotateSpeed * Time.deltaTime);
+                    }
 
-                if (Vector3.Distance(transform.position, waypoints[currentWaypoint].position) == 0f && transform.eulerAngles == waypoints[currentWaypoint].rotation)
-                {
-                    NextWaypoint();
+                    if (Vector3.Distance(transform.position, waypoints[currentWaypoint].position) == 0f && transform.eulerAngles == waypoints[currentWaypoint].rotation)
+                    {
+                        if (currentWaypoint == waypoints.Count-1)
+                        {
+                          StopMoving();   
+                        }
+                        NextWaypoint();
+                    }
                 }
             }
         }
@@ -159,6 +178,8 @@ namespace Hertzole.GoldPlayer.Example.Editor
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("BeginMove"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("EndMoveOnLastPoint"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("startingWaypoint"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("moveSpeed"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty("rotateSpeed"));
