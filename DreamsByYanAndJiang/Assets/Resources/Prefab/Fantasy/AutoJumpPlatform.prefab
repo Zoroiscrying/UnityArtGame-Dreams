@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2051266925266511447}
   - component: {fileID: 2051266925266511440}
   - component: {fileID: 2051266925266511441}
+  - component: {fileID: 1528007791}
+  - component: {fileID: 1528007792}
   m_Layer: 0
   m_Name: AutoJumpPlatform
   m_TagString: Untagged
@@ -46213,8 +46215,34 @@ MeshCollider:
   m_GameObject: {fileID: 2051266925266511442}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &1528007791
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051266925266511442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 24, y: 24, z: 24}
+  m_Center: {x: 10, y: 10, z: -10}
+--- !u!114 &1528007792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051266925266511442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c2a9f9ef119bd54ea4512a94c6efa61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceMultiplier: {x: 0, y: 1, z: 0}

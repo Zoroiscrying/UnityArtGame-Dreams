@@ -9,18 +9,31 @@ public class StandingCollapsePlatform : TouchableItem
     private Shader _thisShader;
     private float _beginTouchTime;
     private bool _beginTouch = false;
+    [SerializeField] private float _basicEmissiveValue = 0.1f;
+    [SerializeField] private float _emissiveMultiplier = 1.2f;
     [SerializeField] private float _collapseTime = 2f;
     [SerializeField] private float _recoverTime = 2f;
+    [SerializeField] private bool _useLocalMat = false;
     private float _percentage = 0.0f;
 
     private void Start()
     {
-        _thisShader = ResourceManager.Instance.StandingCollapsePlatformShader;
-       _thisMaterial = this.GetComponent<Renderer>().sharedMaterial = new Material(_thisShader);
-       if (_thisMaterial.HasProperty("_EmissionIntensity"))
-       {
-           _thisMaterial.SetFloat("_EmissionIntensity",0.1f);
-       }
+        if (!_useLocalMat)
+        {
+            _thisShader = ResourceManager.Instance.StandingCollapsePlatformShader;
+           _thisMaterial = this.GetComponent<Renderer>().sharedMaterial = new Material(_thisShader);
+        }
+        else
+        {
+            _thisMaterial = this.GetComponent<Renderer>().sharedMaterial;
+            _thisShader = _thisMaterial.shader;
+            _thisMaterial = this.GetComponent<Renderer>().sharedMaterial = new Material(_thisMaterial);
+        }
+        
+        if (_thisMaterial.HasProperty("_EmissionIntensity"))
+        {
+            _thisMaterial.SetFloat("_EmissionIntensity",_basicEmissiveValue);
+        }
     }
 
     public override void OnBeginTouch()
@@ -39,10 +52,8 @@ public class StandingCollapsePlatform : TouchableItem
     {
         if (_thisMaterial.HasProperty("_EmissionIntensity"))
         {
-            _thisMaterial.SetFloat("_EmissionIntensity",0.1f+_percentage*1.2f);
+            _thisMaterial.SetFloat("_EmissionIntensity",_basicEmissiveValue+_percentage*_emissiveMultiplier);
         }
-        
-        
     }
 
     private void Collapse()

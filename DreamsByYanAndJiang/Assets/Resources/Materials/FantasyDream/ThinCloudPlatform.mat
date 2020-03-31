@@ -54,11 +54,12 @@ Material:
     - _Blend: 0
     - _BumpScale: 1
     - _CloudAnimSpeed: 0.6
-    - _CloudHeight: 2
+    - _CloudHeight: 0.5
     - _CloudSize: 0.1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DstBlend: 0
+    - _EmissionIntensity: 1
     - _EmitSize: 2
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
