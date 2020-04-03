@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1959515818508819926}
   - component: {fileID: 1959515818508819921}
   - component: {fileID: 1959515818508819920}
+  - component: {fileID: 1100181137}
+  - component: {fileID: 1100181136}
   m_Layer: 0
   m_Name: ThinAirPlatform
   m_TagString: Untagged
@@ -46210,3 +46212,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &1100181137
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959515818508819923}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 24, z: 20}
+  m_Center: {x: 10, y: 10, z: -10}
+--- !u!114 &1100181136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959515818508819923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580bfeab7bd3645438d0c6fdab2ba0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayerBeginTouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onPlayerEndTouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _basicEmissiveValue: 1
+  _emissiveMultiplier: 3
+  _collapseTime: 2
+  _recoverTime: 2
+  _useLocalMat: 1
