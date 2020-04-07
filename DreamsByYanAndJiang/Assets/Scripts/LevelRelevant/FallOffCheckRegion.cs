@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class FallOffCheckRegion : MonoBehaviour
 {
-    
+    public bool IfSwitchMaterial = true;
     
     private void Start()
     {
-        this.GetComponent<Renderer>().sharedMaterial = ResourceManager.Instance.DangerZoneMat;
+        if (IfSwitchMaterial)
+        {
+            this.GetComponent<Renderer>().sharedMaterial = ResourceManager.Instance.DangerZoneMat;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : TouchableItem
+public class RunSpeedBoostPlatform : TouchableItem
 {
     public float MoveSpeedMultiplier = 2.0f;
     
