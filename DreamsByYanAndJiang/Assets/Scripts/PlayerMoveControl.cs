@@ -12,6 +12,8 @@ public class PlayerMoveControl : MonoBehaviour
     private float _multiplierValue = 1.0f;
     private bool _resetedMultiplier = false;
 
+    public float MultiplierTime => _multiplierTime;
+    
     private void Start()
     {
         this.playerController = GetComponent<GoldPlayerController>();

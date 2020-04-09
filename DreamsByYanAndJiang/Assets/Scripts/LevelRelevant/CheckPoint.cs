@@ -47,12 +47,13 @@ public class CheckPoint : MonoBehaviour
         _priority = priority;
         _active = active;
     }
+    
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            // Debug.Log("Player!");
+            Debug.Log("Player Go CheckPoint!");
             FallOffManager.SceneFallOffManager.UpdateActivePoint(this);
         }
     }

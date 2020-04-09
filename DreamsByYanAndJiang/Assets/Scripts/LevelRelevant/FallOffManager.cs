@@ -14,6 +14,7 @@ public class FallOffManager : MonoBehaviour
     public List<CheckPoint> checkPoints;
     
     private Dictionary<Vector3,int> _checkPointPriorityDict = new Dictionary<Vector3, int>();
+    [SerializeField]
     private CheckPoint _activeCheckpoint;
     public bool CheckScenePoints = false;
     public static FallOffManager SceneFallOffManager;
@@ -76,7 +77,7 @@ public class FallOffManager : MonoBehaviour
         if (_activeCheckpoint!=null)
         {
             Debug.Log("Change:" + _activeCheckpoint.Position );
-            obj.transform.position = _activeCheckpoint.Position;
+            obj.transform.position = _activeCheckpoint.transform.position;
         }
     }
 
@@ -89,7 +90,8 @@ public class FallOffManager : MonoBehaviour
             {
                 characterController.Move(Vector3.zero);
                 characterController.enabled = false;
-                player.position = _activeCheckpoint.Position;
+                Debug.Log("Change to point:" + _activeCheckpoint.Position );
+                player.position = _activeCheckpoint.transform.position;
                 characterController.enabled = true;
             }
         }

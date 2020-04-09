@@ -327,6 +327,8 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AnimationManager.cs" t="Include" />
+          <e p="FloatingSelf.cs" t="Include" />
           <e p="InteractionSys" t="Include">
             <e p="BouncePlatform.cs" t="Include" />
             <e p="CameraRaycasting.cs" t="Include" />
@@ -354,6 +356,8 @@
             <e p="MovingPlatform.cs" t="Include" />
           </e>
           <e p="PlayerMoveControl.cs" t="Include" />
+          <e p="PlayerUIControl.cs" t="Include" />
+          <e p="RotatingSelf.cs" t="Include" />
           <e p="SceneInitialization.cs" t="Include" />
           <e p="Singleton" t="Include">
             <e p="ResourceManager.cs" t="Include" />
@@ -361,6 +365,7 @@
             <e p="Singleton.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />
           </e>
+          <e p="Test.cs" t="Include" />
           <e p="TestAndPrototype" t="Include">
             <e p="AttributeTest.cs" t="Include" />
             <e p="DestroySelf.cs" t="Include" />
@@ -375,6 +380,7 @@
               <e p="TimerExtensions.cs" t="Include" />
             </e>
           </e>
+          <e p="UILogicControl.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

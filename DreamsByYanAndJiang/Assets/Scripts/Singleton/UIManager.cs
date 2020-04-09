@@ -21,6 +21,18 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private float _sceneEndTime = 1.0f;
     public float SceneEndAnimTime => _sceneEndTime;
 
+    [Header("Player Status")] [SerializeField]
+    private Image _playerDoubleJumpImage;
+    [SerializeField] private Image _fastMovingImage;
+
+    [Header("Pause Panel")] [SerializeField]
+    private GameObject PausePanel;
+    private bool paused = false;
+    
+    
+    [Header("Menu Panel")] [SerializeField]private GameObject MenuPanel;
+    [SerializeField] private GameObject GameInfoPanel;
+
     private void Awake()
     {
         if (UIManager.Instance != this && UIManager.Instance != null)
@@ -119,8 +131,31 @@ public class UIManager : Singleton<UIManager>
             , _sceneEndTime).SetEase(Ease.InQuad)
             .OnComplete((onComplete.Invoke));
     }
-    
 
+    public void ShowDoubleJumpImage()
+    {
+        _playerDoubleJumpImage.rectTransform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutQuad);
+    }
+
+    public void CloseDoubleJumpImage()
+    {
+        _playerDoubleJumpImage.rectTransform.DOScale(Vector3.zero, 0.2f).SetEase(Ease.InQuad);
+    }
+
+    public void ShowFastMovingValue()
+    {
+        _fastMovingImage.rectTransform.DOScaleX(1f, 0.15f).SetEase(Ease.OutQuad);
+    }
+
+    public void CloseFastMovingValue()
+    {
+        _fastMovingImage.rectTransform.DOScaleX(0f, 0.5f).SetEase(Ease.InQuad);
+    }
+    
+    public void UpdateFastMovingValue(float value)
+    {
+        _fastMovingImage.rectTransform.localScale = new Vector3(value,1,1);
+    }
     // private void Update()
     // {
     //     if (Input.GetKeyDown(KeyCode.K))
@@ -129,4 +164,42 @@ public class UIManager : Singleton<UIManager>
     //             Time.timeSinceLevelLoad.ToString(),64,1f,2f);
     //     }
     // }
+    public void ShowPausePanel()
+    {
+        PausePanel.SetActive(true);
+        Time.timeScale = 0.0f;
+        paused = true;
+    }
+
+    public void ResumePausePanel()
+    {
+        PausePanel.SetActive(false);
+        Time.timeScale = 1.0f;
+        paused = false;
+    }
+
+    public void SwitchPausePanel()
+    {
+        if (paused)
+        {
+            ResumePausePanel();
+        }
+        else
+        {
+            ShowPausePanel();
+        }
+    }
+
+    public void ShowGameInfoPanel()
+    {
+        GameInfoPanel.SetActive(true);
+    }
+
+    public void ResumeGameInfoPanel()
+    {
+        GameInfoPanel.SetActive(false);
+    }
+    
+    
+    
 }
