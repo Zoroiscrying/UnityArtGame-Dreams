@@ -8,10 +8,14 @@ public class SceneInitialization : MonoBehaviour
 {
     public UnityEvent IntializationEvent;
     public static Color SceneHintColor = Color.white;
+    public bool DoSceneInitAnim = true;
     
     private void Start()
     {
-        UIManager.Instance.SceneEnterAnim();
+        if (DoSceneInitAnim)
+        {
+            UIManager.Instance.SceneEnterAnim();
+        }
         IntializationEvent.Invoke();
     }
     

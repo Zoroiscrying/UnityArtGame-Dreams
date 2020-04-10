@@ -27,7 +27,13 @@ public class UILogicControl : MonoBehaviour
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene(0);
+        Debug.Log("Pressed UI Btn");
+        ResumePausePanel();
+        UIManager.Instance.SceneEndAnim((() =>
+        {
+            UIManager.Instance.ShowMenuPanel();
+            SceneManager.LoadScene(0);
+        }));
     }
 
     public void RestartScene()
@@ -37,6 +43,7 @@ public class UILogicControl : MonoBehaviour
     
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        UIManager.Instance.ResumeMenuPanel();
+        UIManager.Instance.SwitchToScene(2);
     }
 }

@@ -32,10 +32,10 @@ public abstract class TouchableItem :MonoBehaviour, ITouchableZoro
 
     protected virtual void OnTouch(Transform player)
     {
-        OnTouchGraphics();
+        OnTouchGraphics(player);
     }
 
-    protected virtual void OnTouchGraphics()
+    protected virtual void OnTouchGraphics(Transform player)
     {
         
     }

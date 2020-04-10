@@ -20,13 +20,10 @@ public class JumpRestoreTouchableItem : TouchableItem
         playerMoveControl.AddOneJumpChance();
     }
 
-    protected override void OnTouchGraphics()
+    protected override void OnTouchGraphics(Transform player)
     {
-        base.OnTouchGraphics();
-        if (DieEffect!=null)
-        {
-            Instantiate(DieEffect, this.transform.position, Quaternion.identity);
-        }
+        base.OnTouchGraphics(player);
+        ResourceManager.Instance.GenerateDoubleJumpItemParticle(this.transform.position, this.transform.rotation);
         Timer.Register(RestoreTime, (() => { this.gameObject.SetActive(true); }));
         this.gameObject.SetActive(false);
     }

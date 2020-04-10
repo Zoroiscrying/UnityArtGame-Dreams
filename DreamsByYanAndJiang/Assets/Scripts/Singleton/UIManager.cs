@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Hertzole.GoldPlayer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -33,6 +34,8 @@ public class UIManager : Singleton<UIManager>
     [Header("Menu Panel")] [SerializeField]private GameObject MenuPanel;
     [SerializeField] private GameObject GameInfoPanel;
 
+    private GoldPlayerController _playerController;
+
     private void Awake()
     {
         if (UIManager.Instance != this && UIManager.Instance != null)
@@ -40,6 +43,12 @@ public class UIManager : Singleton<UIManager>
             Destroy(this.gameObject);
         }
     }
+
+    public void SwitchToScene(int sceneIndex)
+    {
+        SceneEndAnim((() => { SceneManager.LoadScene(sceneIndex); }));
+    }
+
 
     public void ShowInteractHint()
     {
@@ -167,6 +176,15 @@ public class UIManager : Singleton<UIManager>
     public void ShowPausePanel()
     {
         PausePanel.SetActive(true);
+        if (!_playerController)
+        {
+            _playerController = FindObjectOfType<GoldPlayerController>();
+        }
+        if (_playerController)
+        {
+            Debug.Log("Found player controller");
+            _playerController.enabled = false;
+        }
         Time.timeScale = 0.0f;
         paused = true;
     }
@@ -174,6 +192,14 @@ public class UIManager : Singleton<UIManager>
     public void ResumePausePanel()
     {
         PausePanel.SetActive(false);
+        if (!_playerController)
+        {
+            _playerController = FindObjectOfType<GoldPlayerController>();
+        }
+        if (_playerController)
+        {
+            _playerController.enabled = true;
+        }
         Time.timeScale = 1.0f;
         paused = false;
     }
@@ -199,7 +225,15 @@ public class UIManager : Singleton<UIManager>
     {
         GameInfoPanel.SetActive(false);
     }
-    
-    
+
+    public void ResumeMenuPanel()
+    {
+        MenuPanel.SetActive(false);
+    }
+
+    public void ShowMenuPanel()
+    {
+        MenuPanel.SetActive(true);
+    }
     
 }

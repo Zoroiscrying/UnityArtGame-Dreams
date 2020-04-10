@@ -26,14 +26,10 @@ public class SpeedMultiplierTouchableItem : TouchableItem
         playerMoveControl.SpeedUpForSeconds(Multiplier,Duration);
     }
 
-    protected override void OnTouchGraphics()
+    protected override void OnTouchGraphics(Transform player)
     {
-        base.OnTouchGraphics();
-        if (DieParticle!=null)
-        {
-            Instantiate(DieParticle, this.transform.position, Quaternion.identity);
-        }
-
+        base.OnTouchGraphics(player);
+        ResourceManager.Instance.GenerateFastMovingItemParticle(player.position, player.rotation);
         Timer.Register(RestoreTime, (() => { this.gameObject.SetActive(true); }));
         this.gameObject.SetActive(false);
     }

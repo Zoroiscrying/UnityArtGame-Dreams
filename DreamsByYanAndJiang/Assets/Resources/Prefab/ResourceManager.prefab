@@ -45,3 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StandingCollapsePlatformShader: {fileID: -6465566751694194690, guid: b8d1dfca8c506e2448d157a88b525e6b,
     type: 3}
+  DangerZoneMat: {fileID: 2100000, guid: e17ff859212e85e40970de60fb446035, type: 2}
+  FastMovingItemParticle: {fileID: 651541854572680488, guid: efacf98d0d6c5ac49ba4569323100882,
+    type: 3}
+  DoubleJumpItemParticle: {fileID: 873366505827097771, guid: 33f7710a74fdfc94ba9ad2c00e713c42,
+    type: 3}
