@@ -319,6 +319,7 @@
             </e>
           </e>
         </e>
+        <e p="OutOfTheDreamMatControl.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="Shaders" t="Include">
             <e p="Cloud_Shader_Coded_Unlit.shader" t="Include" />
@@ -328,6 +329,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AnimationManager.cs" t="Include" />
+          <e p="AudioFadeClass.cs" t="Include" />
           <e p="FloatingSelf.cs" t="Include" />
           <e p="InteractionSys" t="Include">
             <e p="BouncePlatform.cs" t="Include" />
@@ -358,8 +360,10 @@
           <e p="PlayerMoveControl.cs" t="Include" />
           <e p="PlayerUIControl.cs" t="Include" />
           <e p="RotatingSelf.cs" t="Include" />
+          <e p="SceneAudioPlayer.cs" t="Include" />
           <e p="SceneInitialization.cs" t="Include" />
           <e p="Singleton" t="Include">
+            <e p="AudioManager.cs" t="Include" />
             <e p="ResourceManager.cs" t="Include" />
             <e p="SceneManagerZoro.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />

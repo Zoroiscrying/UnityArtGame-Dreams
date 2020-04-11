@@ -76,11 +76,11 @@ Material:
     - _EnableFog: 1
     - _EnableRotation: 1
     - _EnvironmentReflections: 1
-    - _Exposure: 1
+    - _Exposure: 0.5
     - _FogFill: 0.942
-    - _FogHeight: 0.645
-    - _FogIntensity: 0.8
-    - _FogSmoothness: 0.304
+    - _FogHeight: 1
+    - _FogIntensity: 0.096
+    - _FogSmoothness: 0.989
     - _Fogg: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -106,4 +106,4 @@ Material:
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _TintColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TintColor: {r: 0, g: 1, b: 0.736887, a: 1}
