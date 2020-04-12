@@ -12,9 +12,16 @@ public class SpeedMultiplierTouchableItem : TouchableItem
     public float Duration = 3f;
     
     public float RotatingSpeed = 10.0f;
+
+    private void Start()
+    {
+        this.transform.rotation = Quaternion.Euler(30,20,0);
+    }
+
     private void Update()
     {
-        this.transform.Rotate(new Vector3(Time.time,-Time.time,Time.time),Time.deltaTime*RotatingSpeed);
+        this.transform.Rotate(new Vector3(0,1,0),Time.deltaTime*RotatingSpeed);
+        
     }
 
     // Start is called before the first frame update

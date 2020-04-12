@@ -78,7 +78,7 @@ public class UIManager : Singleton<UIManager>
         var endPos = _endPos.position;
         this._hintText.text = text;
         this._hintText.fontSize = fontSize;
-        this._hintText.color = new Color(0,0,0,0);
+        this._hintText.color = new Color(fontColor.r,fontColor.g,fontColor.b,0);
         if (ease)
         {
             this._hintText.rectTransform.position = startPos;

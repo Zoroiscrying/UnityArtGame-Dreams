@@ -14,10 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Resources/Scenes/Dream_Fantasy.unity
     guid: 1b15408af173db14bb6ae4329e94e2a5
+  - enabled: 1
+    path: Assets/Resources/Scenes/Dream_OutOfTheDream.unity
+    guid: babacf4054b55a74ba02929e9fafd4d1
   - enabled: 0
     path: Assets/Resources/Scenes/MovementTestScene.unity
     guid: 6a74cf5eb205a504db3b1f3fd55c156b
   - enabled: 0
-    path: Assets/Resources/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

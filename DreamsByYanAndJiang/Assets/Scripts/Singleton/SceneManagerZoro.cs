@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneManagerZoro : Singleton<SceneManagerZoro>
+public class SceneManagerZoro : MonoBehaviour
 {
     private bool _sceneLoadedOnce = false;
     

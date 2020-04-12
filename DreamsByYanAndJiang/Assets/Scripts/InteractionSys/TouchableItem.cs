@@ -6,23 +6,24 @@ using UnityEngine.Events;
 
 public abstract class TouchableItem :MonoBehaviour, ITouchableZoro
 {
+    [SerializeField] private bool _canReActivate = true;
     public UnityEvent onPlayerBeginTouchEvent;
     public UnityEvent onPlayerEndTouchEvent;
+    private bool _activated = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+
             OnTouch(other.transform);
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            OnEndTouch(other.transform);
-        }
+        OnEndTouch(other.transform);
     }
 
     protected virtual void OnEndTouch(Transform player)
@@ -42,7 +43,14 @@ public abstract class TouchableItem :MonoBehaviour, ITouchableZoro
 
     public virtual void OnBeginTouch()
     {
-        onPlayerBeginTouchEvent.Invoke();
+        if (!_activated)
+        {
+            _activated = true;
+            onPlayerBeginTouchEvent.Invoke();
+        }else if (_canReActivate)
+        {
+            onPlayerBeginTouchEvent.Invoke();
+        }
     }
 
     public virtual void OnTouching()
@@ -52,6 +60,14 @@ public abstract class TouchableItem :MonoBehaviour, ITouchableZoro
 
     public virtual void OnEndTouch()
     {
-        onPlayerEndTouchEvent.Invoke();
+        if (!_activated)
+        {
+            _activated = true;
+            onPlayerEndTouchEvent.Invoke();
+        }
+        else if (_canReActivate)
+        {
+            onPlayerEndTouchEvent.Invoke();
+        }
     }
 }

@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class SimpleTouchableItem : TouchableItem
 {
-    public override void OnEndTouch()
-    {
-        base.OnEndTouch();
-    }
-
+    private Color pinkCol = new Color(254,127,156,255);
+    
     public void EnableCollider()
     {
         var collider = GetComponent<Collider>();
@@ -22,6 +19,11 @@ public class SimpleTouchableItem : TouchableItem
     public void ShowHint(string hint)
     {
         UIManager.Instance.ShowHint(Color.white,true, hint);
+    }
+
+    public void ShowPinkHint(string hint)
+    {
+        UIManager.Instance.ShowHint(pinkCol,true,hint);
     }
     
     
