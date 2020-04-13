@@ -10,6 +10,7 @@ public class InteractButton : InteractbleItem
     void Start()
     {
         _material = GetComponent<Renderer>().sharedMaterial;
+        onInteractEvent.AddListener(PlayBtnSound);
     }
 
     public override void OnStartHover()
@@ -28,6 +29,11 @@ public class InteractButton : InteractbleItem
         {
             _material.SetFloat("_EmissionIntensity",0.0f);
         }
+    }
+
+    public void PlayBtnSound()
+    {
+        AudioManager.Instance.RandomPlayVfx(ResourceManager.Instance.BtnAudioClips);
     }
 
     // Update is called once per frame

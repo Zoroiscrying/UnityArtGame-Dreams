@@ -30,9 +30,9 @@ public class UIManager : Singleton<UIManager>
     private GameObject PausePanel;
     private bool paused = false;
     
-    
     [Header("Menu Panel")] [SerializeField]private GameObject MenuPanel;
     [SerializeField] private GameObject GameInfoPanel;
+    [SerializeField] private GameObject DeveloperPanel;
 
     private GoldPlayerController _playerController;
 
@@ -100,6 +100,12 @@ public class UIManager : Singleton<UIManager>
     {
         this._hintText.DOColor(new Color(0, 0, 0, 0), time);
     }
+
+    public void ShowDevelopersPanel(bool close)
+    {
+        DeveloperPanel.SetActive(close);
+    }
+
 
     public void ChangeSceneCoverImageColor(Color col)
     {

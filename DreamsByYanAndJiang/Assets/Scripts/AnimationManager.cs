@@ -6,11 +6,14 @@ using UnityEngine;
 public class AnimationManager : Singleton<AnimationManager>
 {
 
-    public void MoveUpAndDisappear(Transform obj,float duration, float moveDis, float disappearTime = 5f)
+    public void MoveUpAndDisappear(Transform obj,float duration, float moveDis, float disappearTime = 5f, bool destroy = true)
     {
         obj.DOMove(obj.transform.position + Vector3.up * moveDis, duration).SetEase(Ease.OutQuad);
         obj.DOScale(Vector3.zero, duration).SetEase(Ease.OutQuad);
-        Destroy(obj.gameObject,duration);
+        if (destroy)
+        {
+            Destroy(obj.gameObject,duration);
+        }
     }
 
     public void ScaleDisappear(Transform obj, float duration, float disappearTime = 5.0f)

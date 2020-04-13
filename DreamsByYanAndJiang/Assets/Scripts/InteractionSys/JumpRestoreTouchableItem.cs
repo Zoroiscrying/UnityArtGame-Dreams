@@ -8,6 +8,7 @@ public class JumpRestoreTouchableItem : TouchableItem
     public ParticleSystem DieEffect;
     public float RestoreTime = 3.0f;
     public float RotatingSpeed = 10.0f;
+
     private void Update()
     {
         this.transform.Rotate(new Vector3(Time.time,-Time.time,Time.time),Time.deltaTime*RotatingSpeed);
@@ -25,6 +26,7 @@ public class JumpRestoreTouchableItem : TouchableItem
         base.OnTouchGraphics(player);
         ResourceManager.Instance.GenerateDoubleJumpItemParticle(this.transform.position, this.transform.rotation);
         Timer.Register(RestoreTime, (() => { this.gameObject.SetActive(true); }));
+        AudioManager.Instance.RandomPlayVfx(ResourceManager.Instance.DoubleJumpItemAudioClips);
         this.gameObject.SetActive(false);
     }
 

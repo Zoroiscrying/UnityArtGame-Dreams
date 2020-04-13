@@ -18,6 +18,7 @@ public class SceneManagerZoro : MonoBehaviour
     public void SwitchToScene(int sceneIndex)
     {
         UIManager.Instance.SceneEndAnim();
+        AudioManager.Instance.CloseMusic();
         Timer.Register(UIManager.Instance.SceneEndAnimTime,
             (() => { switchToScene(sceneIndex); }));
     }

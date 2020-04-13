@@ -53,13 +53,13 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
-    - _CloudAnimSpeed: 0.3
-    - _CloudHeight: 0.4
-    - _CloudSize: 0.5
+    - _CloudAnimSpeed: 0.2
+    - _CloudHeight: 0.2
+    - _CloudSize: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DstBlend: 0
-    - _EmissionIntensity: 1.2
+    - _EmissionIntensity: 1.5
     - _EmitSize: 0.1
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0

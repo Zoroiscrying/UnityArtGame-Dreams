@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public abstract class InteractbleItem : MonoBehaviour, IInteractableZoro
 {
-    [SerializeField] private UnityEvent onInteractEvent;
+    [SerializeField] protected UnityEvent onInteractEvent;
     
     // Start is called before the first frame update
 

@@ -6,6 +6,7 @@ public class SceneAudioPlayer : MonoBehaviour
 {
     public void PlayMenuSceneMusic()
     {
+        Debug.Log("Play menu scene Music");
         AudioManager.Instance.PlayMenuAudio();
     }
 

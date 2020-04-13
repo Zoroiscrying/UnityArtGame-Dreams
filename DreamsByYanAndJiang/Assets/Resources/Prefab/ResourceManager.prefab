@@ -50,3 +50,26 @@ MonoBehaviour:
     type: 3}
   DoubleJumpItemParticle: {fileID: 873366505827097771, guid: 33f7710a74fdfc94ba9ad2c00e713c42,
     type: 3}
+  FloatingRockParticle: {fileID: 1738281070325402592, guid: 855457ca185f1494f869faeef182c9a1,
+    type: 3}
+  CheckPointParticle: {fileID: 5769771113152975597, guid: d6957eb039e2037479f9ac03a572d161,
+    type: 3}
+  DoubleJumpItemAudioClips:
+  - {fileID: 8300000, guid: cbf25605217fb5d47874a0204dde4dcc, type: 3}
+  - {fileID: 8300000, guid: 8101d6f6a3e9b3e48b083dd9d7210de3, type: 3}
+  - {fileID: 8300000, guid: 7303d6c6684138a489e65726152e5279, type: 3}
+  FastMovingItemAudioClips:
+  - {fileID: 8300000, guid: cbf25605217fb5d47874a0204dde4dcc, type: 3}
+  - {fileID: 8300000, guid: 8101d6f6a3e9b3e48b083dd9d7210de3, type: 3}
+  - {fileID: 8300000, guid: 7303d6c6684138a489e65726152e5279, type: 3}
+  BtnAudioClips:
+  - {fileID: 8300000, guid: ce0c75988789cc042abe588e4e700f25, type: 3}
+  HintAudioClips:
+  - {fileID: 8300000, guid: 74f77920d8d73fa4d938c0d998c74bd8, type: 3}
+  - {fileID: 8300000, guid: dd90a0b383cc6a846809e2123cc7c79a, type: 3}
+  - {fileID: 8300000, guid: 1e49b9ad023e0e947a2d709c2d7ad873, type: 3}
+  - {fileID: 8300000, guid: 958c13d5c6bbc464d9ca54f0ae235342, type: 3}
+  - {fileID: 8300000, guid: ceb56f74b1d5b5d48a614c57e7c63f06, type: 3}
+  - {fileID: 8300000, guid: dfc5f68e6eacb6342878e3f5f787919d, type: 3}
+  UIClickSound: {fileID: 0}
+  UIHoverSound: {fileID: 0}

@@ -38,6 +38,7 @@ public class SpeedMultiplierTouchableItem : TouchableItem
         base.OnTouchGraphics(player);
         ResourceManager.Instance.GenerateFastMovingItemParticle(player.position, player.rotation);
         Timer.Register(RestoreTime, (() => { this.gameObject.SetActive(true); }));
+        AudioManager.Instance.RandomPlayVfx(ResourceManager.Instance.FastMovingItemAudioClips);
         this.gameObject.SetActive(false);
     }
 }
