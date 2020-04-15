@@ -23,7 +23,8 @@ public class UIManager : Singleton<UIManager>
     public float SceneEndAnimTime => _sceneEndTime;
 
     [Header("Player Status")] [SerializeField]
-    private Image _playerDoubleJumpImage;
+    private GameObject _playerStatusPanel;
+    [SerializeField] private Image _playerDoubleJumpImage;
     [SerializeField] private Image _fastMovingImage;
 
     [Header("Pause Panel")] [SerializeField]
@@ -47,6 +48,11 @@ public class UIManager : Singleton<UIManager>
     public void SwitchToScene(int sceneIndex)
     {
         SceneEndAnim((() => { SceneManager.LoadScene(sceneIndex); }));
+    }
+
+    public void ShowPlayerStatus(bool close)
+    {
+        _playerStatusPanel.SetActive(close);
     }
 
 
@@ -149,7 +155,7 @@ public class UIManager : Singleton<UIManager>
 
     public void ShowDoubleJumpImage()
     {
-        _playerDoubleJumpImage.rectTransform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutQuad);
+        _playerDoubleJumpImage.rectTransform.DOScale(Vector3.one*2, 0.2f).SetEase(Ease.OutQuad);
     }
 
     public void CloseDoubleJumpImage()
@@ -181,6 +187,7 @@ public class UIManager : Singleton<UIManager>
     // }
     public void ShowPausePanel()
     {
+        Cursor.visible = true;
         PausePanel.SetActive(true);
         if (!_playerController)
         {
@@ -197,6 +204,7 @@ public class UIManager : Singleton<UIManager>
 
     public void ResumePausePanel()
     {
+        Cursor.visible = false;
         PausePanel.SetActive(false);
         if (!_playerController)
         {
@@ -234,11 +242,13 @@ public class UIManager : Singleton<UIManager>
 
     public void ResumeMenuPanel()
     {
+        Cursor.visible = false;
         MenuPanel.SetActive(false);
     }
 
     public void ShowMenuPanel()
     {
+        Cursor.visible = true;
         MenuPanel.SetActive(true);
     }
     

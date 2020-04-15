@@ -30,6 +30,11 @@ public class UILogicControl : MonoBehaviour
         UIManager.Instance.ShowDevelopersPanel(close);
     }
 
+    public void ShowPlayerUIPanel(bool close)
+    {
+        UIManager.Instance.ShowPlayerStatus(close);
+    }
+
     public void BackToMenu()
     {
         Debug.Log("Pressed UI Btn");
@@ -49,7 +54,7 @@ public class UILogicControl : MonoBehaviour
     public void StartGame()
     {
         UIManager.Instance.ResumeMenuPanel();
-        UIManager.Instance.SwitchToScene(0);
+        UIManager.Instance.SwitchToScene(1);
     }
 
     public void QuitGame()

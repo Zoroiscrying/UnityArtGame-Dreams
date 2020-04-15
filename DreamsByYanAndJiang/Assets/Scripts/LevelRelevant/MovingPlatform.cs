@@ -88,9 +88,9 @@ namespace Hertzole.GoldPlayer.Example
                         transform.eulerAngles = Vector3.MoveTowards(transform.eulerAngles, waypoints[currentWaypoint].rotation, rotateSpeed * Time.deltaTime);
                     }
 
-                    if (Vector3.Distance(transform.position, waypoints[currentWaypoint].position) == 0f && transform.eulerAngles == waypoints[currentWaypoint].rotation)
+                    if (Vector3.Distance(transform.position, waypoints[currentWaypoint].position) <= 0.001f && transform.eulerAngles == waypoints[currentWaypoint].rotation)
                     {
-                        if (currentWaypoint == waypoints.Count-1)
+                        if (EndMoveOnLastPoint && currentWaypoint == waypoints.Count-1)
                         {
                           StopMoving();   
                         }

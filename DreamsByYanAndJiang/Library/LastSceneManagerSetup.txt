@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Resources/Scenes/Dream_IntoTheDream_Art.unity
+- path: Assets/Resources/Scenes/MenuScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

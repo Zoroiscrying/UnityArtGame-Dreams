@@ -84,15 +84,19 @@ public class AudioManager : Singleton<AudioManager>
 
     public void RandomPlayVfx(AudioClip[] clips)
     {
-        int randomIndex = Random.Range(0, clips.Length);
+        if (clips.Length>=1)
+        {
+            int randomIndex = Random.Range(0, clips.Length);
 
-        float randomPitch = Random.Range(lowPitchRange, highPitchRange);
+            float randomPitch = Random.Range(lowPitchRange, highPitchRange);
 
-        _efxSource.pitch = randomPitch;
+            _efxSource.pitch = randomPitch;
 
-        _efxSource.clip = clips[randomIndex];
+            
+            _efxSource.clip = clips[randomIndex];
 
-        _efxSource.Play();
+            _efxSource.Play();
+        }
     }
 
     public void PlayLevelOneAudio(int index)

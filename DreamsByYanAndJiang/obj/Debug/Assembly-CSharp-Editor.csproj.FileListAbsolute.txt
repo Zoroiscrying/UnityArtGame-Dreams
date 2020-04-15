@@ -339,3 +339,13 @@ D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\U
 D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.ProGrids.Editor.dll
 D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.ProGrids.pdb
 D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.ProGrids.Editor.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Autodesk.Fbx.dll
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.Formats.Fbx.Editor.dll
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.Formats.Fbx.Runtime.dll
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.Recorder.dll
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.Recorder.Editor.dll
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.Formats.Fbx.Editor.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.Recorder.Editor.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.Recorder.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Autodesk.Fbx.pdb
+D:\codingProjects\unity\UnityArtGame-Dreams\DreamsByYanAndJiang\Temp\bin\Debug\Unity.Formats.Fbx.Runtime.pdb

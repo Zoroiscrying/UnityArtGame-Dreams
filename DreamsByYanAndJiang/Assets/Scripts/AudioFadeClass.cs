@@ -16,7 +16,6 @@ public static class AudioFadeClass
         }
  
         audioSource.Stop();
-        audioSource.volume = startVolume;
     }
  
     public static IEnumerator FadeIn(AudioSource audioSource, float FadeTime, float endVolume = 1.0f)
@@ -43,12 +42,13 @@ namespace UnityEngine
     {
         public static void FadeOut(this AudioSource a, float duration)
         {
-            AudioFadeClass.FadeOut(a, duration);
+            AudioManager.Instance.StartCoroutine(AudioFadeClass.FadeOut(a, duration));
         }
 
         public static void FadeIn(this AudioSource a, float duration, float endVolume)
         {
-            AudioFadeClass.FadeIn(a, duration, endVolume);
+            AudioManager.Instance.StartCoroutine(AudioFadeClass.FadeIn(a, duration, endVolume));
+            // AudioFadeClass.FadeIn(a, duration, endVolume);
         }
         
     }

@@ -32,14 +32,20 @@ public class SimpleTouchableItem : TouchableItem
     {
         UIManager.Instance.ShowHint(Color.white,true, hint);
         SoundFx();
-        AnimationManager.Instance.MoveUpAndDisappear(graphic.transform, 1.0f, 1f);
+        if (graphic)
+        {
+            AnimationManager.Instance.MoveUpAndDisappear(graphic.transform, 1.0f, 1f);
+        }
     }
 
     public void ShowPinkHint(string hint)
     {
         UIManager.Instance.ShowHint(pinkCol,true,hint);
         SoundFx();
-        AnimationManager.Instance.MoveUpAndDisappear(graphic.transform, 1.0f, 1f);
+        if (graphic)
+        {
+            AnimationManager.Instance.MoveUpAndDisappear(graphic.transform, 1.0f, 1f);
+        }
     }
 
     public void SoundFx()

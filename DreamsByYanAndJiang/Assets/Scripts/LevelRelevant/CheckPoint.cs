@@ -66,7 +66,10 @@ public class CheckPoint : MonoBehaviour
         {
             Debug.Log("Player Go CheckPoint!");
             FallOffManager.SceneFallOffManager.UpdateActivePoint(this);
-            AnimationManager.Instance.MoveUpAndDisappear(particle.transform, .5f, .5f);
+            if (particle)
+            {
+                AnimationManager.Instance.MoveUpAndDisappear(particle.transform, .5f, .5f);
+            }
         }
     }
 }
