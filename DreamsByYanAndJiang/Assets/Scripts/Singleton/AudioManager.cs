@@ -36,11 +36,11 @@ public class AudioManager : Singleton<AudioManager>
         if (_bgMusicSource.clip)
         {
             _bgMusicSource.FadeOut(4.0f);
-            Timer.Register(4.0f, OnCompleted.Invoke);
+            Timer.Register(5.0f, OnCompleted.Invoke);
         }
         else
         {
-            Timer.Register(4.0f, OnCompleted.Invoke);
+            Timer.Register(5.0f, OnCompleted.Invoke);
         }
     }
 
@@ -48,8 +48,11 @@ public class AudioManager : Singleton<AudioManager>
     {
         if (_bgMusicSource.clip)
         {
-            _bgMusicSource.Play();
             _bgMusicSource.FadeIn(4.0f,_maxVolume);
+        }
+        else
+        {
+            Debug.Log("No clip?");
         }
     }
     
@@ -57,13 +60,12 @@ public class AudioManager : Singleton<AudioManager>
     {
         if (_bgMusicSource.clip)
         {
-            _bgMusicSource.Play();
             _bgMusicSource.FadeIn(4.0f,_maxVolume);
-            Timer.Register(4.0f, OnCompleted.Invoke);
+            Timer.Register(5.0f, OnCompleted.Invoke);
         }
         else
         {
-            Timer.Register(4.0f, OnCompleted.Invoke);
+            Timer.Register(5.0f, OnCompleted.Invoke);
         }
     }
 
@@ -116,6 +118,7 @@ public class AudioManager : Singleton<AudioManager>
         }
         CloseMusic((() =>
         {
+            Debug.Log("Scene one Music reset.");
             this._bgMusicSource.clip = audioClip;
             PlayMusic();
         }));

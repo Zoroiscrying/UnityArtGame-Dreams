@@ -15,6 +15,14 @@ public class SceneManagerZoro : MonoBehaviour
     //         //Destroy(this.gameObject);
     //     }
     // }
+
+    public static void SwitchToSceneStatic(int sceneIndex)
+    {
+        AudioManager.Instance.CloseMusic();
+        UIManager.Instance.SceneEndAnim();
+        Timer.Register(UIManager.Instance.SceneEndAnimTime,
+            (() => { SceneManager.LoadSceneAsync(sceneIndex); }));
+    }
     public void SwitchToScene(int sceneIndex)
     {
         AudioManager.Instance.CloseMusic();

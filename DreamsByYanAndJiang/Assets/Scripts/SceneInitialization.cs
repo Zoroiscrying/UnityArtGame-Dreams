@@ -12,11 +12,24 @@ public class SceneInitialization : MonoBehaviour
     
     private void Start()
     {
+        // Cursor.visible = false;
+        UIManager.Instance.ResumePausePanel();
+        
         if (DoSceneInitAnim)
         {
             UIManager.Instance.SceneEnterAnim();
         }
         IntializationEvent.Invoke();
+    }
+
+    public void LockCursorOff()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
     }
     
         

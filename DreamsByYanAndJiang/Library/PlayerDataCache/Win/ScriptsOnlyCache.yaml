@@ -34,8 +34,6 @@ ScriptsOnlyBuild:
     Hertzole.GoldPlayer.dll:
     - Hertzole.GoldPlayer.GoldPlayerController
     - Hertzole.GoldPlayer.GoldPlayerInputSystem
-    NaughtyAttributes.Editor.dll:
-    - NaughtyAttributes.Editor.NaughtyInspector
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
@@ -345,6 +343,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
     Assets/Resources/Scenes/Dream_OutOfTheDream.unity:
@@ -394,6 +396,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11910}
     - Class: 114
       Script: {instanceID: 12894}
+    - Class: 114
+      Script: {instanceID: 14184}
     - Class: 114
       Script: {instanceID: 14560}
     - Class: 114
@@ -864,7 +868,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: e95c0b091be0a25c652ea50e66798eab
+      Hash: 13216324cd16cade0a29037a9a3dfba1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InteractButton
@@ -2164,4 +2168,4 @@ ScriptsOnlyBuild:
   - Assets/Resources/Scenes/Dream_IntoTheDream_Art.unity
   - Assets/Resources/Scenes/Dream_Fantasy.unity
   - Assets/Resources/Scenes/Dream_OutOfTheDream.unity
-  playerPath: D:/codingProjects/unity/DreamsByYanAndJiangBuilds/Build-Latest4/DreamsByYanAndJiang.exe
+  playerPath: D:/codingProjects/unity/DreamsByYanAndJiangBuilds/Build-Latest8/DreamsByYanAndJiang.exe

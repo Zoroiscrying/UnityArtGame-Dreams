@@ -57,6 +57,7 @@ public class CheckPoint : MonoBehaviour
     private void GenerateGraphic()
     {
         particle = ResourceManager.Instance.GenerateCheckPointParticle(this.transform.position, Quaternion.identity);
+        particle.transform.parent = this.transform;
     }
 
 

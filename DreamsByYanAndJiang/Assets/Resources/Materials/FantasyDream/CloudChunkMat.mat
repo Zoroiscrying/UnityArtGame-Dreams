@@ -72,7 +72,7 @@ Material:
     - _Cull: 2
     - _Cutoff: 0.5
     - _DstBlend: 0
-    - _EmissionIntensity: 1.3
+    - _EmissionIntensity: 1
     - _EmitSize: 1.6
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
@@ -92,10 +92,10 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _BotColor: {r: 1, g: 0.6839622, b: 0.7739115, a: 1}
+    - _BotColor: {r: 1, g: 0.48900002, b: 0.63693, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmitColor: {r: 1, g: 0.48900002, b: 0.63693, a: 1}
     - _PositionProjection: {r: 1, g: 0, b: 0, a: 90}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _TopColor: {r: 0.9811321, g: 0.92520756, b: 0.94112456, a: 1}
+    - _TopColor: {r: 0.98039216, g: 0.8, b: 0.85154057, a: 1}

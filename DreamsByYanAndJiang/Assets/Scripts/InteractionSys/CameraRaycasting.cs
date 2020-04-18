@@ -38,7 +38,7 @@ public class CameraRaycasting : MonoBehaviour
             if (interactable != null)
             {
                 var withInRange = whatIHit.distance <= interactable.MaxRange;
-                if (withInRange)
+                if (withInRange && interactable.CanInteract)
                 {
                     UIManager.Instance.ShowInteractHint();
                     

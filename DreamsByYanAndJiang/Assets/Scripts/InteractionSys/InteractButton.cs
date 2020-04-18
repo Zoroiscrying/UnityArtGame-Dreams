@@ -5,7 +5,7 @@ using UnityEngine;
 public class InteractButton : InteractbleItem
 {
     private Material _material;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +15,14 @@ public class InteractButton : InteractbleItem
 
     public override void OnStartHover()
     {
+        if (_interacted)
+        {
+            if (_material.HasProperty("_EmissionIntensity"))
+            {
+                _material.SetFloat("_EmissionIntensity",0.0f);
+            }
+            return;
+        }
         base.OnStartHover();
         if (_material.HasProperty("_EmissionIntensity"))
         {
@@ -29,6 +37,12 @@ public class InteractButton : InteractbleItem
         {
             _material.SetFloat("_EmissionIntensity",0.0f);
         }
+    }
+
+    public override void OnInteract()
+    {
+        base.OnInteract();
+        this._interacted = true;
     }
 
     public void PlayBtnSound()

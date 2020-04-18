@@ -10,11 +10,23 @@ using UnityEngine.SceneManagement;
 public abstract class InteractbleItem : MonoBehaviour, IInteractableZoro
 {
     [SerializeField] protected UnityEvent onInteractEvent;
-    
+    protected bool _interacted = false;
+    public bool _canReInteract = true;
     // Start is called before the first frame update
 
     public virtual float MaxRange { get; } = 5f;
-    
+
+    public bool CanInteract
+    {
+        get { return !(_interacted && !_canReInteract); }
+        
+    }
+
+    public bool Interacted
+    {
+        get { return _interacted; }
+    }
+
 
     public virtual void OnStartHover()
     {

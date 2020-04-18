@@ -53,9 +53,9 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
-    - _CloudAnimSpeed: 0.2
-    - _CloudHeight: 0.2
-    - _CloudSize: 1
+    - _CloudAnimSpeed: 1
+    - _CloudHeight: 0.05
+    - _CloudSize: 0.2
     - _Cull: 2
     - _Cutoff: 0.5
     - _DstBlend: 0
@@ -83,7 +83,7 @@ Material:
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmitColor: {r: 0.4430505, g: 1.0362515, b: 1.3612566, a: 0}
-    - _PositionProjection: {r: 1, g: 1, b: 1, a: 90}
+    - _PositionProjection: {r: 0, g: 1, b: 0, a: 90}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _TopColor: {r: 0.81127626, g: 0.94266945, b: 0.9716981, a: 0}
 --- !u!114 &6730308558896595745

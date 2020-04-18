@@ -5,6 +5,10 @@ using UnityEngine;
 public interface IInteractableZoro
 {
     float MaxRange { get; }
+    
+    bool CanInteract { get; }
+    
+    bool Interacted { get; }
 
     void OnStartHover();
     

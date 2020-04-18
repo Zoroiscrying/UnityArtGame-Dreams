@@ -15,6 +15,7 @@ public class SimpleTouchableItem : TouchableItem
         {
             graphic = ResourceManager.Instance.GenerateFloatingRockParticle(this.transform.position,
                 Quaternion.identity);
+            graphic.transform.parent = this.transform;
         }
     }
 

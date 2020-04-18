@@ -58,7 +58,11 @@ public class StandingCollapsePlatform : TouchableItem
 
     private void Collapse()
     {
-        this.GetComponent<Collider>().enabled = false;
+        var colliders = GetComponents<Collider>();
+        foreach (var collider in colliders)
+        {
+            collider.enabled = false;
+        }
         this.GetComponent<Renderer>().enabled = false;
         _beginTouch = false;
         Timer.Register(_recoverTime, Recover);
@@ -69,7 +73,11 @@ public class StandingCollapsePlatform : TouchableItem
     {
         _beginTouch = false;
         _percentage = 0.0f;
-        this.GetComponent<Collider>().enabled = true;
+        var colliders = GetComponents<Collider>();
+        foreach (var collider in colliders)
+        {
+            collider.enabled = true;
+        }
         this.GetComponent<Renderer>().enabled = true;
     }
 

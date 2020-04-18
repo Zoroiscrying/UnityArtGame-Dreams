@@ -195,8 +195,8 @@ public class UIManager : Singleton<UIManager>
         }
         if (_playerController)
         {
-            Debug.Log("Found player controller");
             _playerController.enabled = false;
+            _playerController.Camera.LockCursor(false);
         }
         Time.timeScale = 0.0f;
         paused = true;
@@ -213,6 +213,7 @@ public class UIManager : Singleton<UIManager>
         if (_playerController)
         {
             _playerController.enabled = true;
+            _playerController.Camera.LockCursor(true);
         }
         Time.timeScale = 1.0f;
         paused = false;

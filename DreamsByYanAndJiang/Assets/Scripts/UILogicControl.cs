@@ -10,6 +10,11 @@ public class UILogicControl : MonoBehaviour
         UIManager.Instance.ShowPausePanel();
     }
 
+    public void ShowGameLobbyPanel()
+    {
+        UIManager.Instance.ShowMenuPanel();
+    }
+
     public void ResumePausePanel()
     {
         UIManager.Instance.ResumePausePanel();
@@ -39,10 +44,10 @@ public class UILogicControl : MonoBehaviour
     {
         Debug.Log("Pressed UI Btn");
         ResumePausePanel();
+        SceneManagerZoro.SwitchToSceneStatic(0);
         UIManager.Instance.SceneEndAnim((() =>
         {
             UIManager.Instance.ShowMenuPanel();
-            SceneManager.LoadScene(0);
         }));
     }
 
@@ -54,7 +59,7 @@ public class UILogicControl : MonoBehaviour
     public void StartGame()
     {
         UIManager.Instance.ResumeMenuPanel();
-        UIManager.Instance.SwitchToScene(1);
+        SceneManagerZoro.SwitchToSceneStatic(1);
     }
 
     public void QuitGame()
